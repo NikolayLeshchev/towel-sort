@@ -7,6 +7,4 @@ function towelSort(arr) {
 }
 
 
-module.exports = function towelSort (matrix) {
-  return [];
-}
+
