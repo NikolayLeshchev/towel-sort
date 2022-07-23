@@ -1,11 +1,7 @@
 function towelSort(arr) {
-  let res = [arr[0]];
-  for (let i = 1; i < arr.length; i++) {
-    if (i % 2 === 0) {
-      res = `${res},${arr[i]}`;
-    } else {
-      res = `${res},${arr[i].reverse()}`;
-    }
+  let res = [];
+  for (let i = 0; i < arr.length; i++) {
+    i % 2 === 0 ? (res = res.concat(matrix[i])) : (res = res.concat(matrix[i].reverse()));
   }
   return res;
 }
