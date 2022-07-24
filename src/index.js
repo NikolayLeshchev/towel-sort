@@ -1,17 +1,18 @@
 function towelSort(arr) {
-  
-  let res = [];
+    
+if (!matrix.length || !Array.isArray(matrix)) return [];
 
-  if (matrix.length <= 0) {
-    return res;
-  } else {
-    for (let i = 0; i < arr.length; i++) {
-      i % 2 === 0
-        ? (res = res.concat(matrix[i]))
-        : (res = res.concat(matrix[i].reverse()));
+  let i = 1;
+  const arr = matrix.map(function(item, index) {
+    if (i === index){
+      i += 2;
+      return item.reverse();
+    } else {
+      return item;
     }
-  }
-  return res;
+  });
+
+  return arr.join().split(',').map(Number);
 }
 
 
