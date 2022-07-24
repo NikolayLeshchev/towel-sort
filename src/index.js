@@ -1,9 +1,9 @@
 module.exports = function towelSort (matrix) {
-  if (!matrix.length || !Array.isArray(matrix)) return [];
+  if ( !matrix.length || !Array.isArray(matrix)) return [];
 
   let a = 1;
-  const array = matrix.map(function(item, index){
-    if(a === index) {
+  const arr = matrix.map(function(item, index){
+    if (a === index) {
       a += 2;
       return item.reverse();
     } else {
@@ -11,5 +11,5 @@ module.exports = function towelSort (matrix) {
     }
   });
 
-  return array.join().split(',').map(Number);
+  return arr.join().split(',').map(Number);
 }
