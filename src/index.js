@@ -1,22 +1,15 @@
-function towelSort(arr) {
-    
-if (!matrix.length || !Array.isArray(matrix)) return [];
+module.exports = function towelSort (matrix) {
+  if (!matrix.length || !Array.isArray(matrix)) return [];
 
-  let i = 1;
-  const arr = matrix.map(function(item, index) {
-    if (i === index){
-      i += 2;
+  let a = 1;
+  const array = matrix.map(function(item, index){
+    if(a === index) {
+      a += 2;
       return item.reverse();
     } else {
       return item;
     }
   });
 
-  return arr.join().split(',').map(Number);
-}
-
-
-
-module.exports = function towelSort (matrix) {
-  return [];
+  return array.join().split(',').map(Number);
 }
